@@ -1,10 +1,19 @@
 let submitbutton = document.getElementById('submit');
-let outputField = document.getElementById('decimal');
+const outputField = document.getElementById('decimal');
+const inputField = document.getElementById('getBinary');
 
- convertFunction = () =>{
-    const getValue = document.getElementById('getBinary').value;
-    const binary = parseInt(getValue, 2);
-    outputField.innerText = binary  ; 
+ bin2Dec = () =>{
+    const getValue = inputField.value;
+    const regExp = /[2-9]/;
+    let n = regExp.test(getValue)
+    if(getValue !== ""  && n === false){
+        const binary = parseInt(getValue, 2);
+        outputField.innerText = binary;
+        document.querySelector('.outputField').style.display = 'block';
+         inputField.value ="";
+    }
+    else alert('Enter a valid Binary Number')
 }
 
-submitbutton.addEventListener('click', convertFunction); 
+submitbutton.addEventListener('click', bin2Dec); 
+

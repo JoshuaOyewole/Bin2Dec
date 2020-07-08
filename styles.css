@@ -9,20 +9,20 @@ html{
 }
 
 body{
-   background: linear-gradient(to right, #164b6e, #609ec7); 
+    background: linear-gradient(to right, #bac1c5, #cbd1d4);
+ /*    background: linear-gradient(to right, #164b6e, #609ec7); */
     color: #f4f4f4;
     line-height: 1.6;
-}
-
-.container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
 }
 
+
 .bin2Dec{
-    width: 35rem;
-    background: linear-gradient(to right, #209ef1, #0e4a72);
+  background: linear-gradient(to right, #209ef1, #0e4a72); 
    /*  background: linear-gradient(to bottom, #0e4a72 #fff); */
    /*  background-color: #0e4a72; */
     border-radius: 2rem;
@@ -45,9 +45,8 @@ body{
 
 .section-2{
    background-color: #f4f4f4;
-    border-radius: 3rem;
-    height: 73vh; 
-    padding: 10rem 1rem;
+    border-radius: 3rem 3rem 0 0;
+    padding: 3rem 1rem;
     color: #0e4a72;
 }
 
@@ -55,12 +54,16 @@ body{
     background: linear-gradient(to left, #e9ecee, #fcfcff);
     border-radius: 1rem;
     padding: 1rem;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
     color: #067fcf;
     font-size: 3rem;
     text-align: center;
-    font-weight: 900;
-    
+    font-weight: 900; 
+    display: none;
+}
+
+.output-Text{
+    font-size: 2.2rem;
 }
 
 .inputField{
@@ -103,4 +106,9 @@ body{
 
 .inputField__submitBinary:focus{
     outline: none;
+}
+
+footer{
+    font-size: 1.6rem;
+    color: #c00b05;
 }
