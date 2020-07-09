@@ -16,4 +16,8 @@ const inputField = document.getElementById('getBinary');
 }
 
 submitbutton.addEventListener('click', bin2Dec); 
-
+window.addEventListener('keypress', e => {
+    if(e.which === 13 || e.keyCode === 13){
+        bin2Dec();
+    }
+}); 
